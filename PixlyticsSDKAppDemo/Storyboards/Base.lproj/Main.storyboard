@@ -1,0 +1,578 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="bOT-3G-pTj">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="M09-WW-Inw">
+            <objects>
+                <navigationController id="bOT-3G-pTj" sceneMemberID="viewController">
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Ewf-2n-Uf0">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="vib-np-nhA"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fgM-cj-hjF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-713" y="134"/>
+        </scene>
+        <!--Home View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="HomeViewController" customModule="PixlyticsSDKAppDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mainLogo" translatesAutoresizingMaskIntoConstraints="NO" id="jai-CM-xxM">
+                                <rect key="frame" x="94" y="124" width="187.5" height="187.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="jai-CM-xxM" secondAttribute="height" id="bih-qP-HUE"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="tintColor">
+                                        <color key="value" red="0.13579949120000001" green="0.096086271109999996" blue="0.32100637970000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="E4j-og-IZD">
+                                <rect key="frame" x="62.5" y="311.5" width="250" height="355.5"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0A8-ru-bdB" userLabel="button view">
+                                        <rect key="frame" x="0.0" y="81" width="250" height="213.5"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zU5-Km-8FV" userLabel="recognition offline" customClass="MainButton" customModule="PixlyticsSDKAppDemo" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="250" height="50"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="50" id="Yfg-nj-FLl"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
+                                                <state key="normal" title="Recognition offline"/>
+                                                <connections>
+                                                    <segue destination="5dp-gd-dp0" kind="show" id="bEL-Bb-Ugg"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F1C-PD-It9" userLabel="recognition online" customClass="MainButton" customModule="PixlyticsSDKAppDemo" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="82" width="250" height="50"/>
+                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
+                                                <state key="normal" title="Recognition online"/>
+                                                <connections>
+                                                    <segue destination="ZCO-y5-zn7" kind="show" id="puQ-io-PQg"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Jv-Qq-9wd" userLabel="add remove train" customClass="MainButton" customModule="PixlyticsSDKAppDemo" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="163.5" width="250" height="50"/>
+                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
+                                                <state key="normal" title="Item editing"/>
+                                                <connections>
+                                                    <segue destination="ePy-BD-zKl" kind="show" id="P6w-58-CBN"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstItem="6Jv-Qq-9wd" firstAttribute="trailing" secondItem="zU5-Km-8FV" secondAttribute="trailing" id="0YA-U8-BCT"/>
+                                            <constraint firstItem="6Jv-Qq-9wd" firstAttribute="height" secondItem="zU5-Km-8FV" secondAttribute="height" id="GLu-bR-u8o"/>
+                                            <constraint firstItem="F1C-PD-It9" firstAttribute="leading" secondItem="zU5-Km-8FV" secondAttribute="leading" id="HCn-Lk-iU5"/>
+                                            <constraint firstAttribute="trailing" secondItem="zU5-Km-8FV" secondAttribute="trailing" id="HSq-s3-mW7"/>
+                                            <constraint firstItem="zU5-Km-8FV" firstAttribute="top" secondItem="0A8-ru-bdB" secondAttribute="top" id="UY6-gr-gjQ"/>
+                                            <constraint firstItem="F1C-PD-It9" firstAttribute="centerY" secondItem="0A8-ru-bdB" secondAttribute="centerY" id="VLR-ki-hPV"/>
+                                            <constraint firstItem="6Jv-Qq-9wd" firstAttribute="leading" secondItem="zU5-Km-8FV" secondAttribute="leading" id="cqB-4j-e9f"/>
+                                            <constraint firstAttribute="bottom" secondItem="6Jv-Qq-9wd" secondAttribute="bottom" id="d4G-x9-yCt"/>
+                                            <constraint firstItem="F1C-PD-It9" firstAttribute="height" secondItem="zU5-Km-8FV" secondAttribute="height" id="oNt-v0-I1v"/>
+                                            <constraint firstItem="zU5-Km-8FV" firstAttribute="leading" secondItem="0A8-ru-bdB" secondAttribute="leading" id="vGz-rg-YuS"/>
+                                            <constraint firstItem="F1C-PD-It9" firstAttribute="trailing" secondItem="zU5-Km-8FV" secondAttribute="trailing" id="yaN-Df-pEK"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="0A8-ru-bdB" firstAttribute="centerY" secondItem="E4j-og-IZD" secondAttribute="centerY" constant="10" id="FDQ-q9-5UM"/>
+                                    <constraint firstItem="0A8-ru-bdB" firstAttribute="leading" secondItem="E4j-og-IZD" secondAttribute="leading" id="Mre-j6-n71"/>
+                                    <constraint firstItem="0A8-ru-bdB" firstAttribute="height" secondItem="E4j-og-IZD" secondAttribute="height" multiplier="3:5" id="Xj1-QE-k6X"/>
+                                    <constraint firstAttribute="trailing" secondItem="0A8-ru-bdB" secondAttribute="trailing" id="tCK-pI-oLj"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="jai-CM-xxM" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="60" id="3hu-ap-4S3"/>
+                            <constraint firstItem="E4j-og-IZD" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="4ld-Bg-jv2"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="E4j-og-IZD" secondAttribute="bottom" id="9i8-o7-mJF"/>
+                            <constraint firstItem="E4j-og-IZD" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="2:3" id="ghQ-tY-KxX"/>
+                            <constraint firstItem="E4j-og-IZD" firstAttribute="top" secondItem="jai-CM-xxM" secondAttribute="bottom" id="kg3-p5-loa"/>
+                            <constraint firstItem="jai-CM-xxM" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="1:2" id="myH-mC-44K"/>
+                            <constraint firstItem="jai-CM-xxM" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="qDj-gd-1sz"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Hr7-mp-b6B"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="244" y="118"/>
+        </scene>
+        <!--Recognition offline-->
+        <scene sceneID="xCd-Hl-bSF">
+            <objects>
+                <viewController title="Recognition offline" id="5dp-gd-dp0" customClass="RecognitionOfflineViewController" customModule="PixlyticsSDKAppDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="FPE-Yw-wQE">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="DqW-6c-kll">
+                                <rect key="frame" x="50" y="114" width="275" height="275"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fVU-a0-2b6">
+                                <rect key="frame" x="50" y="389" width="275" height="278"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q16-Kf-Ch4" customClass="MainButton" customModule="PixlyticsSDKAppDemo" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="104" width="275" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="MNU-TO-57v"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
+                                        <state key="normal" title="Take photo"/>
+                                        <connections>
+                                            <action selector="takePhoto:" destination="5dp-gd-dp0" eventType="touchUpInside" id="Kq3-9U-aFR"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W4K-yV-jaW" customClass="MainButton" customModule="PixlyticsSDKAppDemo" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="174" width="275" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="fYb-La-xKX"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
+                                        <state key="normal" title="Recognize"/>
+                                        <connections>
+                                            <action selector="startRecognition:" destination="5dp-gd-dp0" eventType="touchUpInside" id="gcw-f9-rH0"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1LI-Ms-7Jj" customClass="MainButton" customModule="PixlyticsSDKAppDemo" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="34" width="275" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="fZ6-JR-qah"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
+                                        <state key="normal" title="Download model"/>
+                                        <connections>
+                                            <action selector="downloadModel:" destination="5dp-gd-dp0" eventType="touchUpInside" id="25R-oD-EJ3"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="W4K-yV-jaW" firstAttribute="top" secondItem="q16-Kf-Ch4" secondAttribute="bottom" constant="20" id="045-w1-fcS"/>
+                                    <constraint firstItem="W4K-yV-jaW" firstAttribute="trailing" secondItem="q16-Kf-Ch4" secondAttribute="trailing" id="30Q-E8-3qE"/>
+                                    <constraint firstAttribute="trailing" secondItem="1LI-Ms-7Jj" secondAttribute="trailing" id="78s-4k-ZfF"/>
+                                    <constraint firstItem="1LI-Ms-7Jj" firstAttribute="leading" secondItem="fVU-a0-2b6" secondAttribute="leading" id="7Iu-Rd-4nJ"/>
+                                    <constraint firstItem="W4K-yV-jaW" firstAttribute="leading" secondItem="q16-Kf-Ch4" secondAttribute="leading" id="BwN-tD-chN"/>
+                                    <constraint firstAttribute="trailing" secondItem="q16-Kf-Ch4" secondAttribute="trailing" id="CBX-dz-0RF"/>
+                                    <constraint firstItem="q16-Kf-Ch4" firstAttribute="leading" secondItem="fVU-a0-2b6" secondAttribute="leading" id="NI2-bN-t90"/>
+                                    <constraint firstItem="q16-Kf-Ch4" firstAttribute="top" secondItem="1LI-Ms-7Jj" secondAttribute="bottom" constant="20" id="btf-IL-gBI"/>
+                                    <constraint firstItem="q16-Kf-Ch4" firstAttribute="centerY" secondItem="fVU-a0-2b6" secondAttribute="centerY" constant="-10" id="oSV-eG-Uac"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="DqW-6c-kll" firstAttribute="width" secondItem="DqW-6c-kll" secondAttribute="height" id="4We-qq-jl7"/>
+                            <constraint firstItem="DqW-6c-kll" firstAttribute="centerX" secondItem="FPE-Yw-wQE" secondAttribute="centerX" id="7Zx-a5-juD"/>
+                            <constraint firstItem="DqW-6c-kll" firstAttribute="top" secondItem="RKd-ue-iY6" secondAttribute="top" constant="50" id="9xb-0J-BMP"/>
+                            <constraint firstItem="DqW-6c-kll" firstAttribute="leading" secondItem="RKd-ue-iY6" secondAttribute="leading" constant="50" id="Mhw-cE-mua"/>
+                            <constraint firstItem="RKd-ue-iY6" firstAttribute="bottom" secondItem="fVU-a0-2b6" secondAttribute="bottom" id="Psl-TY-gzw"/>
+                            <constraint firstItem="fVU-a0-2b6" firstAttribute="leading" secondItem="DqW-6c-kll" secondAttribute="leading" id="ceR-aU-87q"/>
+                            <constraint firstItem="fVU-a0-2b6" firstAttribute="trailing" secondItem="DqW-6c-kll" secondAttribute="trailing" id="hXq-80-91t"/>
+                            <constraint firstItem="fVU-a0-2b6" firstAttribute="top" secondItem="DqW-6c-kll" secondAttribute="bottom" id="pqt-8x-Ri4"/>
+                            <constraint firstItem="RKd-ue-iY6" firstAttribute="trailing" secondItem="DqW-6c-kll" secondAttribute="trailing" constant="50" id="yLT-Mm-9Cs"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="RKd-ue-iY6"/>
+                    </view>
+                    <connections>
+                        <outlet property="imageView" destination="DqW-6c-kll" id="EOu-K3-qeq"/>
+                        <segue destination="nhN-TA-nEF" kind="presentation" identifier="DisplayResultViewController" modalPresentationStyle="overFullScreen" modalTransitionStyle="crossDissolve" id="WJf-Q7-qhM"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="07m-RX-z5D" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <navigationItem title="Title" id="tvn-Hl-StL"/>
+            </objects>
+            <point key="canvasLocation" x="1286" y="-588"/>
+        </scene>
+        <!--Item Editing View Controller-->
+        <scene sceneID="qL1-En-LJi">
+            <objects>
+                <viewController id="ePy-BD-zKl" customClass="ItemEditingViewController" customModule="PixlyticsSDKAppDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="FtT-Xi-Zv3">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="b1Z-fe-6Dy">
+                                <rect key="frame" x="0.0" y="124" width="375" height="543"/>
+                                <connections>
+                                    <segue destination="bHg-Fp-W4P" kind="embed" id="jRB-Cf-0Mu"/>
+                                </connections>
+                            </containerView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7YE-H7-3v3">
+                                <rect key="frame" x="0.0" y="64" width="375" height="60"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5s9-2T-iD0" customClass="MainButton" customModule="PixlyticsSDKAppDemo" customModuleProvider="target">
+                                        <rect key="frame" x="287" y="8" width="80" height="44"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="80" id="45L-GR-Dqy"/>
+                                        </constraints>
+                                        <state key="normal" title="+"/>
+                                        <connections>
+                                            <segue destination="3ST-aH-fec" kind="show" id="Xbw-ag-2Um"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dzi-3c-ATu" customClass="MainButton" customModule="PixlyticsSDKAppDemo" customModuleProvider="target">
+                                        <rect key="frame" x="199" y="8" width="80" height="44"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                        <state key="normal" title="-"/>
+                                        <connections>
+                                            <action selector="removeItems:" destination="ePy-BD-zKl" eventType="touchUpInside" id="AMQ-UT-zl2"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="5s9-2T-iD0" firstAttribute="top" secondItem="7YE-H7-3v3" secondAttribute="top" constant="8" id="5UX-r7-Ejs"/>
+                                    <constraint firstAttribute="bottom" secondItem="dzi-3c-ATu" secondAttribute="bottom" constant="8" id="TUH-Kg-38L"/>
+                                    <constraint firstAttribute="height" constant="60" id="UTr-fs-ke2"/>
+                                    <constraint firstItem="dzi-3c-ATu" firstAttribute="top" secondItem="7YE-H7-3v3" secondAttribute="top" constant="8" id="YXk-Nm-3eg"/>
+                                    <constraint firstItem="5s9-2T-iD0" firstAttribute="leading" secondItem="dzi-3c-ATu" secondAttribute="trailing" constant="8" id="cig-fD-vgO"/>
+                                    <constraint firstAttribute="trailing" secondItem="5s9-2T-iD0" secondAttribute="trailing" constant="8" id="fv1-B8-C2D"/>
+                                    <constraint firstAttribute="bottom" secondItem="5s9-2T-iD0" secondAttribute="bottom" constant="8" id="kwd-Mq-xEy"/>
+                                    <constraint firstItem="dzi-3c-ATu" firstAttribute="width" secondItem="5s9-2T-iD0" secondAttribute="width" id="muc-ua-d4Q"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XmT-su-sZy" customClass="MainButton" customModule="PixlyticsSDKAppDemo" customModuleProvider="target">
+                                <rect key="frame" x="20" y="607" width="335" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="dXX-Hl-mjQ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
+                                <state key="normal" title="Train model"/>
+                                <connections>
+                                    <action selector="trainModel:" destination="ePy-BD-zKl" eventType="touchUpInside" id="oTv-HM-F93"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="b1Z-fe-6Dy" secondAttribute="bottom" id="6gZ-4X-BbD"/>
+                            <constraint firstItem="XmT-su-sZy" firstAttribute="leading" secondItem="9Og-LS-kEc" secondAttribute="leading" constant="20" id="HXG-V9-ea3"/>
+                            <constraint firstItem="9Og-LS-kEc" firstAttribute="trailing" secondItem="b1Z-fe-6Dy" secondAttribute="trailing" id="Jj3-GE-u7C"/>
+                            <constraint firstItem="9Og-LS-kEc" firstAttribute="trailing" secondItem="XmT-su-sZy" secondAttribute="trailing" constant="20" id="Mva-fX-C5K"/>
+                            <constraint firstItem="7YE-H7-3v3" firstAttribute="top" secondItem="9Og-LS-kEc" secondAttribute="top" id="SiR-nh-Fan"/>
+                            <constraint firstItem="7YE-H7-3v3" firstAttribute="leading" secondItem="9Og-LS-kEc" secondAttribute="leading" id="epR-ho-Lgf"/>
+                            <constraint firstItem="9Og-LS-kEc" firstAttribute="trailing" secondItem="7YE-H7-3v3" secondAttribute="trailing" id="gn4-oA-RMf"/>
+                            <constraint firstItem="b1Z-fe-6Dy" firstAttribute="leading" secondItem="9Og-LS-kEc" secondAttribute="leading" id="tRZ-2S-m78"/>
+                            <constraint firstItem="b1Z-fe-6Dy" firstAttribute="top" secondItem="7YE-H7-3v3" secondAttribute="bottom" id="uEN-DC-olF"/>
+                            <constraint firstItem="9Og-LS-kEc" firstAttribute="bottom" secondItem="XmT-su-sZy" secondAttribute="bottom" constant="10" id="ycS-SG-uKj"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="9Og-LS-kEc"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="k65-gJ-bqs" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1286" y="888"/>
+        </scene>
+        <!--Add New Item View Controller-->
+        <scene sceneID="LJO-75-QiC">
+            <objects>
+                <viewController id="3ST-aH-fec" customClass="AddNewItemViewController" customModule="PixlyticsSDKAppDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="wdk-NB-TCS">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qKD-xn-iMg" userLabel="Save item" customClass="MainButton" customModule="PixlyticsSDKAppDemo" customModuleProvider="target">
+                                <rect key="frame" x="40" y="547" width="295" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="IOC-mc-5Ff"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
+                                <state key="normal" title="Save item"/>
+                                <connections>
+                                    <action selector="saveItem:" destination="3ST-aH-fec" eventType="touchUpInside" id="XXg-ot-g5l"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="cZC-Tz-Dpz">
+                                <rect key="frame" x="40" y="104" width="295" height="295"/>
+                                <color key="backgroundColor" red="0.93333333330000001" green="0.93333333330000001" blue="0.93333333330000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="cZC-Tz-Dpz" secondAttribute="height" id="13C-8u-Lnx"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="trailing" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wm4-CU-duS" userLabel="add" customClass="RoundedButton" customModule="PixlyticsSDKAppDemo" customModuleProvider="target">
+                                <rect key="frame" x="275" y="339" width="50" height="50"/>
+                                <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="0.24828767123287671" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="BcH-gA-FVB"/>
+                                    <constraint firstAttribute="width" constant="50" id="F04-HP-I2i"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="addPicture:" destination="3ST-aH-fec" eventType="touchUpInside" id="udO-Ls-O5r"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="add" translatesAutoresizingMaskIntoConstraints="NO" id="CJP-6U-Rf1">
+                                <rect key="frame" x="287.5" y="351.5" width="25" height="25"/>
+                            </imageView>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name of item" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="PVA-2A-de5">
+                                <rect key="frame" x="50" y="429" width="275" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="CJP-6U-Rf1" firstAttribute="width" secondItem="Wm4-CU-duS" secondAttribute="width" multiplier="1:2" id="07L-4o-gCi"/>
+                            <constraint firstItem="qKD-xn-iMg" firstAttribute="leading" secondItem="cZC-Tz-Dpz" secondAttribute="leading" id="5pw-NU-wtL"/>
+                            <constraint firstItem="cZC-Tz-Dpz" firstAttribute="leading" secondItem="EZ8-7z-29U" secondAttribute="leading" constant="40" id="6gi-OD-Fwm"/>
+                            <constraint firstItem="qKD-xn-iMg" firstAttribute="trailing" secondItem="cZC-Tz-Dpz" secondAttribute="trailing" id="8gt-H9-Evg"/>
+                            <constraint firstItem="CJP-6U-Rf1" firstAttribute="centerX" secondItem="Wm4-CU-duS" secondAttribute="centerX" id="91o-hq-iDa"/>
+                            <constraint firstItem="PVA-2A-de5" firstAttribute="top" secondItem="cZC-Tz-Dpz" secondAttribute="bottom" constant="30" id="bbe-Jv-ZqW"/>
+                            <constraint firstItem="PVA-2A-de5" firstAttribute="trailing" secondItem="cZC-Tz-Dpz" secondAttribute="trailing" constant="-10" id="dVA-Tf-nOC"/>
+                            <constraint firstItem="Wm4-CU-duS" firstAttribute="bottom" secondItem="cZC-Tz-Dpz" secondAttribute="bottom" constant="-10" id="dpP-au-iQm"/>
+                            <constraint firstItem="CJP-6U-Rf1" firstAttribute="centerY" secondItem="Wm4-CU-duS" secondAttribute="centerY" id="eND-iO-AJF"/>
+                            <constraint firstItem="CJP-6U-Rf1" firstAttribute="height" secondItem="Wm4-CU-duS" secondAttribute="height" multiplier="1:2" id="jp9-Wp-Y66"/>
+                            <constraint firstItem="EZ8-7z-29U" firstAttribute="bottom" secondItem="qKD-xn-iMg" secondAttribute="bottom" constant="80" id="rxc-Hh-eXK"/>
+                            <constraint firstItem="PVA-2A-de5" firstAttribute="leading" secondItem="cZC-Tz-Dpz" secondAttribute="leading" constant="10" id="tFx-Kz-LL1"/>
+                            <constraint firstItem="cZC-Tz-Dpz" firstAttribute="top" secondItem="EZ8-7z-29U" secondAttribute="top" constant="40" id="tW6-YQ-9Xc"/>
+                            <constraint firstItem="Wm4-CU-duS" firstAttribute="trailing" secondItem="cZC-Tz-Dpz" secondAttribute="trailing" constant="-10" id="wdI-na-CmE"/>
+                            <constraint firstItem="EZ8-7z-29U" firstAttribute="trailing" secondItem="cZC-Tz-Dpz" secondAttribute="trailing" constant="40" id="whe-Im-xfI"/>
+                            <constraint firstItem="qKD-xn-iMg" firstAttribute="centerX" secondItem="wdk-NB-TCS" secondAttribute="centerX" id="yZQ-Gg-Op1"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="EZ8-7z-29U"/>
+                    </view>
+                    <connections>
+                        <outlet property="addIconImage" destination="CJP-6U-Rf1" id="WNf-Am-HB5"/>
+                        <outlet property="imageItem" destination="cZC-Tz-Dpz" id="I7I-SE-ieG"/>
+                        <outlet property="nameTextField" destination="PVA-2A-de5" id="qvH-z8-oPP"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wMS-rJ-r8R" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2376.8000000000002" y="886.50674662668678"/>
+        </scene>
+        <!--Recognition online-->
+        <scene sceneID="VZb-gW-YRz">
+            <objects>
+                <viewController title="Recognition online" id="ZCO-y5-zn7" customClass="RecognitionOnlineViewController" customModule="PixlyticsSDKAppDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="OE2-zC-7kU">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="k0D-Mv-ITR">
+                                <rect key="frame" x="50" y="114" width="275" height="275"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VSs-Zf-22l">
+                                <rect key="frame" x="50" y="389" width="275" height="278"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pfm-Su-oNE" customClass="MainButton" customModule="PixlyticsSDKAppDemo" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="104" width="275" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="WeH-99-yHx"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
+                                        <state key="normal" title="Take photo"/>
+                                        <connections>
+                                            <action selector="takePhoto:" destination="ZCO-y5-zn7" eventType="touchUpInside" id="a0p-rh-u5h"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="C7e-dW-5ZC" customClass="MainButton" customModule="PixlyticsSDKAppDemo" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="194" width="275" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="GVX-Mn-N7r"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
+                                        <state key="normal" title="Recognize"/>
+                                        <connections>
+                                            <action selector="launchRecognition:" destination="ZCO-y5-zn7" eventType="touchUpInside" id="oat-em-7XE"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="pfm-Su-oNE" secondAttribute="trailing" id="3Xf-sT-u2P"/>
+                                    <constraint firstItem="pfm-Su-oNE" firstAttribute="leading" secondItem="VSs-Zf-22l" secondAttribute="leading" id="4eq-AJ-248"/>
+                                    <constraint firstItem="pfm-Su-oNE" firstAttribute="centerY" secondItem="VSs-Zf-22l" secondAttribute="centerY" constant="-10" id="T1S-Se-tUN"/>
+                                    <constraint firstItem="C7e-dW-5ZC" firstAttribute="trailing" secondItem="pfm-Su-oNE" secondAttribute="trailing" id="TtH-Pn-0jG"/>
+                                    <constraint firstItem="C7e-dW-5ZC" firstAttribute="leading" secondItem="pfm-Su-oNE" secondAttribute="leading" id="iKb-8V-wjx"/>
+                                    <constraint firstItem="C7e-dW-5ZC" firstAttribute="top" secondItem="pfm-Su-oNE" secondAttribute="bottom" constant="40" id="zan-fd-Cag"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="k0D-Mv-ITR" firstAttribute="top" secondItem="Xlp-Ou-ZPl" secondAttribute="top" constant="50" id="6qd-QY-1JX"/>
+                            <constraint firstItem="VSs-Zf-22l" firstAttribute="leading" secondItem="k0D-Mv-ITR" secondAttribute="leading" id="AQx-97-waz"/>
+                            <constraint firstItem="Xlp-Ou-ZPl" firstAttribute="bottom" secondItem="VSs-Zf-22l" secondAttribute="bottom" id="AT0-Ve-Xdq"/>
+                            <constraint firstItem="k0D-Mv-ITR" firstAttribute="leading" secondItem="Xlp-Ou-ZPl" secondAttribute="leading" constant="50" id="DkI-kL-3Fu"/>
+                            <constraint firstItem="Xlp-Ou-ZPl" firstAttribute="trailing" secondItem="k0D-Mv-ITR" secondAttribute="trailing" constant="50" id="FhS-a7-JFl"/>
+                            <constraint firstItem="VSs-Zf-22l" firstAttribute="top" secondItem="k0D-Mv-ITR" secondAttribute="bottom" id="Ig6-6F-Izj"/>
+                            <constraint firstItem="VSs-Zf-22l" firstAttribute="trailing" secondItem="k0D-Mv-ITR" secondAttribute="trailing" id="g72-9J-6Lr"/>
+                            <constraint firstItem="k0D-Mv-ITR" firstAttribute="centerX" secondItem="OE2-zC-7kU" secondAttribute="centerX" id="mEN-6B-Vz6"/>
+                            <constraint firstItem="k0D-Mv-ITR" firstAttribute="width" secondItem="k0D-Mv-ITR" secondAttribute="height" id="yJ2-bV-ebm"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Xlp-Ou-ZPl"/>
+                    </view>
+                    <connections>
+                        <outlet property="imageView" destination="k0D-Mv-ITR" id="edm-23-j7P"/>
+                        <segue destination="nhN-TA-nEF" kind="presentation" identifier="DisplayResultViewController" modalPresentationStyle="overFullScreen" modalTransitionStyle="crossDissolve" id="KSa-rH-mRo"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="seR-jD-UYv" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1286" y="134"/>
+        </scene>
+        <!--Display Result View Controller-->
+        <scene sceneID="pGH-4p-5fL">
+            <objects>
+                <viewController storyboardIdentifier="DisplayResultViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="nhN-TA-nEF" customClass="DisplayResultViewController" customModule="PixlyticsSDKAppDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" opaque="NO" contentMode="scaleToFill" id="Tfb-Nb-Z6Y">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView opaque="NO" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="BSf-Sf-QWy">
+                                <rect key="frame" x="75" y="181" width="225" height="225"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="BSf-Sf-QWy" secondAttribute="height" id="sed-la-41s"/>
+                                </constraints>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zSN-Kc-xj0">
+                                <rect key="frame" x="75" y="446" width="225" height="41.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bYD-zx-gJe">
+                                        <rect key="frame" x="10" y="10" width="205" height="21.5"/>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="18"/>
+                                        <color key="textColor" red="0.13579949120000001" green="0.096086271109999996" blue="0.32100637970000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="bYD-zx-gJe" firstAttribute="top" secondItem="zSN-Kc-xj0" secondAttribute="top" constant="10" id="AqG-SK-QRC"/>
+                                    <constraint firstAttribute="bottom" secondItem="bYD-zx-gJe" secondAttribute="bottom" constant="10" id="Rsx-uT-wqB"/>
+                                    <constraint firstItem="bYD-zx-gJe" firstAttribute="leading" secondItem="zSN-Kc-xj0" secondAttribute="leading" constant="10" id="jgn-bI-ew5"/>
+                                    <constraint firstAttribute="trailing" secondItem="bYD-zx-gJe" secondAttribute="trailing" constant="10" id="r6H-d1-8k5"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="0.4756349325" green="0.47564673419999998" blue="0.47564041610000002" alpha="0.7540667808219178" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="zSN-Kc-xj0" firstAttribute="trailing" secondItem="BSf-Sf-QWy" secondAttribute="trailing" id="2ZN-z8-1vl"/>
+                            <constraint firstItem="BSf-Sf-QWy" firstAttribute="width" secondItem="Tfb-Nb-Z6Y" secondAttribute="width" multiplier="3:5" id="D0m-qC-52o"/>
+                            <constraint firstItem="zSN-Kc-xj0" firstAttribute="leading" secondItem="BSf-Sf-QWy" secondAttribute="leading" id="Dwh-Us-G5F"/>
+                            <constraint firstItem="BSf-Sf-QWy" firstAttribute="centerY" secondItem="Tfb-Nb-Z6Y" secondAttribute="centerY" constant="-40" id="EmP-pb-qHU"/>
+                            <constraint firstItem="BSf-Sf-QWy" firstAttribute="centerX" secondItem="Tfb-Nb-Z6Y" secondAttribute="centerX" id="gSB-hB-6aB"/>
+                            <constraint firstItem="zSN-Kc-xj0" firstAttribute="top" secondItem="BSf-Sf-QWy" secondAttribute="bottom" constant="40" id="wAv-dc-w6v"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="21R-yc-U2W"/>
+                    </view>
+                    <connections>
+                        <outlet property="itemLabel" destination="bYD-zx-gJe" id="NnZ-rw-cvz"/>
+                        <outlet property="itemLabelView" destination="zSN-Kc-xj0" id="UuA-RQ-dUm"/>
+                        <outlet property="resultImageView" destination="BSf-Sf-QWy" id="qVm-dS-tdv"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wvI-RG-nhP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2519" y="-234"/>
+        </scene>
+        <!--Item Editing Table View Controller-->
+        <scene sceneID="CLB-nU-H5u">
+            <objects>
+                <tableViewController id="bHg-Fp-W4P" customClass="ItemEditingTableViewController" customModule="PixlyticsSDKAppDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsMultipleSelection="YES" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="gjc-vt-OPj">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="543"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ModelItemTableViewCell" rowHeight="80" id="uPs-ID-BzP" customClass="ModelItemTableViewCell" customModule="PixlyticsSDKAppDemo" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="375" height="80"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="uPs-ID-BzP" id="Rm7-7B-2XW">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="80"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="QPG-U5-jwP">
+                                            <rect key="frame" x="10" y="10" width="59.5" height="59.5"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" secondItem="QPG-U5-jwP" secondAttribute="height" id="7Vv-Wu-Mni"/>
+                                            </constraints>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ama-vX-nw7" userLabel="name">
+                                            <rect key="frame" x="77.5" y="0.0" width="200" height="79.5"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="79.5" id="LXu-Ng-S6X"/>
+                                                <constraint firstAttribute="width" priority="750" constant="200" id="sVc-mK-fyT"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7PL-ec-7RV" userLabel="author">
+                                            <rect key="frame" x="242" y="61.5" width="125" height="18"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="18" id="cQb-ky-H8V"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                            <color key="textColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="QPG-U5-jwP" firstAttribute="height" secondItem="Ama-vX-nw7" secondAttribute="height" multiplier="6:8" id="2fo-eL-twt"/>
+                                        <constraint firstItem="7PL-ec-7RV" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="QPG-U5-jwP" secondAttribute="trailing" constant="8" symbolic="YES" id="3RO-jO-Zik"/>
+                                        <constraint firstItem="Ama-vX-nw7" firstAttribute="top" secondItem="Rm7-7B-2XW" secondAttribute="top" id="7dp-eq-yMH"/>
+                                        <constraint firstItem="7PL-ec-7RV" firstAttribute="bottom" secondItem="Ama-vX-nw7" secondAttribute="bottom" id="8WE-8C-2M4"/>
+                                        <constraint firstAttribute="bottom" secondItem="Ama-vX-nw7" secondAttribute="bottom" id="IQM-AD-z5S"/>
+                                        <constraint firstAttribute="trailing" secondItem="7PL-ec-7RV" secondAttribute="trailing" constant="8" id="TQ6-dZ-CUW"/>
+                                        <constraint firstItem="QPG-U5-jwP" firstAttribute="top" secondItem="Rm7-7B-2XW" secondAttribute="top" constant="10" id="cyP-V1-aa3"/>
+                                        <constraint firstItem="Ama-vX-nw7" firstAttribute="leading" secondItem="QPG-U5-jwP" secondAttribute="trailing" constant="8" id="fF2-u0-jXj"/>
+                                        <constraint firstAttribute="trailingMargin" relation="greaterThanOrEqual" secondItem="Ama-vX-nw7" secondAttribute="trailing" constant="8" id="oiB-J7-bgk"/>
+                                        <constraint firstItem="QPG-U5-jwP" firstAttribute="centerY" secondItem="Rm7-7B-2XW" secondAttribute="centerY" id="pWl-g5-HNs"/>
+                                        <constraint firstItem="QPG-U5-jwP" firstAttribute="leading" secondItem="Rm7-7B-2XW" secondAttribute="leading" constant="10" id="sae-sT-5WU"/>
+                                        <constraint firstItem="7PL-ec-7RV" firstAttribute="width" secondItem="Rm7-7B-2XW" secondAttribute="width" multiplier="1:3" id="ttf-fG-a5o"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="authorLabel" destination="7PL-ec-7RV" id="oac-BO-Ii0"/>
+                                    <outlet property="iconImageView" destination="QPG-U5-jwP" id="qGs-4d-pCU"/>
+                                    <outlet property="itemNameLabel" destination="Ama-vX-nw7" id="l4M-mB-vFt"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="bHg-Fp-W4P" id="Hw5-8u-XYx"/>
+                            <outlet property="delegate" destination="bHg-Fp-W4P" id="CrX-l9-4HN"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RoP-Xq-Axn" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1286" y="1580"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="add" width="384" height="384"/>
+        <image name="mainLogo" width="409.60000610351562" height="409.60000610351562"/>
+    </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="WJf-Q7-qhM"/>
+    </inferredMetricsTieBreakers>
+</document>

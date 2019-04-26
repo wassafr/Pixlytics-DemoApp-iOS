@@ -1,0 +1,25 @@
+/* 
+  Localizable.strings
+  PixlyticsSDKAppDemo
+
+  Created by Bertrand VILLAIN on 08/04/2019.
+  Copyright © 2019 Wassa. All rights reserved.
+*/
+
+//Errors
+"error" = "Error";
+"missing_fields" = "You need to add images and set a name before saving it.";
+"error_select_item" = "You have to select at least one item.";
+"fail_list_versions" = "Failed to recover the list of model versions.";
+"fail_unzip_model" = "Unable to download model";
+
+//Message
+"success" = "Success";
+"successfully_deleted_items" = "Items have been successfully deleted";
+"successfully_trained_model" = "The model have been successfully trained";
+
+//Screen titles
+"screen_title_recognition_offline" = "Recognition offline";
+"screen_title_recognition_online" = "Recognition online";
+"screen_title_item_editing" = "Item editing";
+"screen_title_add_new_item" = "Add new item";
