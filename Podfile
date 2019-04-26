@@ -8,6 +8,6 @@ target 'PixlyticsSDKAppDemo' do
   # Pods for PixlyticsSDKAppDemo
   pod 'Kingfisher'
   pod 'JGProgressHUD'
-  pod 'Pixlytics', :podspec => '~/Documents/PodsWassa/Pixlytics-ios/'
+  pod 'Pixlytics'
 
 end
