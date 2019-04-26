@@ -1,3 +1,4 @@
+![Pixlytics AppDemot](https://github.com/wassafr/Pixlytics-DemoApp-iOS/raw/master/Resources/icon_pix.png)
 # Pixlytics AppDemo
 
 ## Synopsis
@@ -10,7 +11,7 @@ You can see the details for implementing the following:
 - Training model for recognition on server
 - Download any version of the trained models
 
-To get more about Pixlytics: https://www.pixlytics.io
+To get more about [Pixlytics](https://www.pixlytics.io)To get more about [Pixlytics](https://www.pixlytics.io)
 
 ## Environment setup & installation
 
@@ -20,9 +21,9 @@ To get more about Pixlytics: https://www.pixlytics.io
 run 'pod install' in the Terminal
 
 ## External dependencies
-Kingfisher
-JGProgressHUD
-Pixlytics
+- Kingfisher
+- JGProgressHUD
+- Pixlytics
 
 ## License
 
