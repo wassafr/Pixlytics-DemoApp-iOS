@@ -1,4 +1,4 @@
-![Pixlytics AppDemot](https://github.com/wassafr/Pixlytics-DemoApp-iOS/raw/master/Resources/icon_pix.png)
+![Pixlytics AppDemo](https://github.com/wassafr/Pixlytics-DemoApp-iOS/raw/master/Resources/icon_pix.jpg)
 # Pixlytics AppDemo
 
 ## Synopsis
